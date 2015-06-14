@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@model  WizardViewModel  
+
+@section scripts{
+    @Scripts.Render("~/Scripts/HomeController/Index.js")
+}
+
+ 
+<!-- Start of the smart wizard -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+            <div id="wizard" class="swMain">  
+                <ul>
+                    <li><a href="#step-1"><span class="stepDesc">Step 1<br /><small>Organisation</small></span></a></li>
+                    <li><a href="#step-2"><span class="stepDesc">Step 2<br /><small>User</small></span></a></li>
+                    <li><a href="#step-3"><span class="stepDesc">Step 3<br /><small>Questionnaire</small></span></a></li>
+                    <li><a href="#step-4"><span class="stepDesc">Step 4<br /><small>Submit</small></span></a></li>
+                    <li><a href="#step-5"><span class="stepDesc">Step 5<br /><small>View</small></span></a></li>
+                </ul>
+                <div id="step-1">
+                    @Html.Partial("Step1Organisation", Model)
+                </div>
+                <div id="step-2">
+                    @Html.Partial("Step2User", Model)
+                </div>
+                <div id="step-3">
+                    @Html.Partial("Step3Questionnaire", Model)
+                </div>
+                <div id="step-4">
+                    @Html.Partial("Step4Submit", Model)
+                </div>
+                <div id="step-5">
+                    @*<div class="row tableContent">
+                           @Html.Action("Step5Summary", "Home")
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of the smart wizard -->
+
+
+    

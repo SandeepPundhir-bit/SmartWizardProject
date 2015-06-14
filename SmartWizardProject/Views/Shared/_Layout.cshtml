@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <!-- IE Compatibility-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title - Smart Wizard Project</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="X-UA-Compatible" />
+
+    <!--start of styles-->
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/SmartProjectCSS")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+
+    <!--start of header-->
+    <header></header>
+
+    <!--start of body-->
+    <div id="body">
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+        
+
+ 
+    </div>
+
+    <!--start of footer-->
+    @*<footer></footer>*@
+
+
+    <!--javascripts-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/SmartProjectJavascripts")
+    @Scripts.Render("~/Scripts/HomeController/Site.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,82 @@
+﻿@model WizardViewModel
+
+
+<style>
+    .row {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+</style>
+
+
+<!--hide the id and type and pass back to the server-->
+@Html.HiddenFor(d => d.PrimaryUser.Id)
+@Html.HiddenFor(d => d.SecondaryUser.Id)
+@Html.Hidden("PrimaryUser.Type", "Primary")
+@Html.Hidden("SecondaryUser.Type", "Secondary")
+
+
+
+<!--Start user detail-->
+<div class="row">
+
+    <!--Start Primary User-->
+    <h3><span class="label label-default">Primary User</span></h3>
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label>First Name</label>
+            @Html.TextBoxFor(d => d.PrimaryUser.FirstName, new { @class = "form-control", placeholder = "Mandatory" })
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            @Html.TextBoxFor(d => d.PrimaryUser.LastName, new { @class = "form-control", placeholder = "Mandatory" })
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            @Html.TextBoxFor(d => d.PrimaryUser.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.PrimaryUser.Email)
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            @Html.TextBoxFor(d => d.PrimaryUser.Address, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Contact</label>
+            @Html.TextBoxFor(d => d.PrimaryUser.Contact, new { @class = "form-control" })
+        </div>
+    </div>
+    <!--End Start Primary User-->
+    
+    
+    
+    <!--Start Secondary User-->
+    <h3><span class="label label-default">Secondary User</span></h3>
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label>First Name</label>
+            @Html.TextBoxFor(d => d.SecondaryUser.FirstName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            @Html.TextBoxFor(d => d.SecondaryUser.LastName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            @Html.TextBoxFor(d => d.SecondaryUser.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.SecondaryUser.Email)
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            @Html.TextBoxFor(d => d.SecondaryUser.Address, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Contact</label>
+            @Html.TextBoxFor(d => d.SecondaryUser.Contact, new { @class = "form-control" })
+        </div>
+    </div>
+    <!--End Secondary User-->
+
+
+
+</div>
+<!--End Registration Detail-->
