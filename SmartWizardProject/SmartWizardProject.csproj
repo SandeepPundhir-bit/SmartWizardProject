@@ -186,6 +186,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SmartWizardController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -271,6 +272,9 @@
     <Content Include="Content\css\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\css\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\css\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\chai.js" />
+    <Content Include="Scripts\cow.js" />
+    <Content Include="Scripts\cow_test.js" />
     <Content Include="Scripts\Lib\dataTable\images\Sorting icons.psd" />
     <None Include="Scripts\Lib\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\Lib\bootstrap\js\bootstrap.js" />
@@ -343,6 +347,7 @@
     <Content Include="Views\Home\Step3Questionnaire.cshtml" />
     <Content Include="Views\Home\Step4Submit.cshtml" />
     <Content Include="Views\Home\Step5Summary.cshtml" />
+    <Content Include="Views\Test\mochaChai.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
