@@ -1,0 +1,68 @@
+﻿@model WizardViewModel
+
+
+
+<!--hdie the questionnaire id and pass back to server-->
+@Html.HiddenFor(d => d.Questionnaire.Id)
+
+
+<!--Start questionnaire detail-->
+<div class="row">
+
+    <h3><span class="label label-primary">Questionnaires</span></h3>
+
+    <div class="form-horizontal">
+
+        <!--Checkbox-->
+        <div class="form-group">
+            <label>Which of the following is a programming language</label>
+            <div>
+                <label class="checkbox-inline">@Html.CheckBoxFor(d => d.Questionnaire.IsJave, new { data_display = "Java" })Java</label>
+                <label class="checkbox-inline">@Html.CheckBoxFor(d => d.Questionnaire.IsCSharp, new { data_display = "CSharp" })C#</label>
+                <label class="checkbox-inline">@Html.CheckBoxFor(d => d.Questionnaire.IsChinese, new { data_display = "Chinese" })Chinese</label>
+            </div>
+        </div>
+
+        <!--Radiobutton-->
+        <div class="form-group">
+            <label>Which of the following is not the frontend Technology</label>
+            <div>
+                <label class="radio-inline">@Html.RadioButtonFor(d => d.Questionnaire.FrontendTech, "HTML")HTML</label>
+                <label class="radio-inline">@Html.RadioButtonFor(d => d.Questionnaire.FrontendTech, "CSS")CSS</label>
+                <label class="radio-inline">@Html.RadioButtonFor(d => d.Questionnaire.FrontendTech, "OFFICE")OFFICE</label>
+            </div>
+        </div>
+
+        <!--Numeric input-->
+        <div class="form-group">
+            <label>The latest version of html</label>
+            <div>
+                @Html.TextBoxFor(d => d.Questionnaire.HtmlVersion)
+                @Html.ValidationMessageFor(d => d.Questionnaire.HtmlVersion)
+            </div>
+        </div>
+
+        <!--Radiobutton-->
+        <div class="form-group">
+            <label>Where do you hear from us</label>
+            <div>
+                <label class="radio-inline">@Html.RadioButtonFor(d => d.Questionnaire.HearFrom, "Facebook")Facebook</label>
+                <label class="radio-inline">@Html.RadioButtonFor(d => d.Questionnaire.HearFrom, "Google")Google</label>
+                <label class="radio-inline">@Html.RadioButtonFor(d => d.Questionnaire.HearFrom, "Newspaper")NewsPaper</label>
+            </div>
+        </div>
+
+        <!--String Comment-->
+        <div class="form-group">
+            <label>Comment</label>
+            <div>
+                @Html.TextAreaFor(d => d.Questionnaire.Comment, new { @class = "col-xs-12 col-sm-12 col-lg-12", rows = 3 })
+                @Html.ValidationMessageFor(d => d.Questionnaire.Comment)
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<!--End Questionnaire Detail-->

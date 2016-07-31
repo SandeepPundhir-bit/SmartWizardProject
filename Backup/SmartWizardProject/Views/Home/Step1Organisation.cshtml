@@ -1,0 +1,48 @@
+﻿@model WizardViewModel
+
+
+<style>
+    .form-group {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+</style>
+
+
+
+<!--hide the organisation id and pass back to server-->
+@Html.HiddenFor(d => d.Organisation.Id)
+
+
+<!--Start Registration Detail-->
+<div class="row">
+    <form id="step1Form" class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label">Username</label>
+            @Html.TextBoxFor(d => d.Organisation.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Organisation.UserName)
+        </div>
+        <div class="form-group">
+            <label class="control-label">Password</label>
+            @Html.PasswordFor(d => d.Organisation.Password, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label class="control-label">Country</label>
+            @Html.DropDownListFor(d => d.Organisation.Country, EnumUtils.ToSelectList<CountryType>(null, "-- Select --"), new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label class="control-label">Organisation Name</label>
+            @Html.TextBoxFor(d => d.Organisation.OrganisationName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label class="control-label">Organisation Address</label>
+            @Html.TextBoxFor(d => d.Organisation.Address, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label class="control-label">Organisation Contact</label>
+            @Html.TextBoxFor(d => d.Organisation.Contact, new { @class = "form-control" })
+        </div>
+    </form>
+</div>
+
+<!--End Registration Detail-->

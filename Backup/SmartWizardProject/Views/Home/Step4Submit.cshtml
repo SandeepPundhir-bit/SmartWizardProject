@@ -1,0 +1,94 @@
+﻿@model WizardViewModel
+
+
+
+<style>
+    .panel-body {
+        padding: 0px 0px 0px 0px;
+    }
+
+        .panel-body span {
+            font-weight: bold;
+        }
+</style>
+
+
+ <!--Start submit form detail-->
+<div class="row">
+
+    <!--Panle for Primary User-->
+    <div class="col-xs-12 col-md-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">Primary User Details</div>
+            <div class="panel-body">
+                <div class="row">
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">FirstName:<span id="PrimaryUser_FirstName_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">LastName:<span id="PrimaryUser_LastName_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Email:<span id="PrimaryUser_Email_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Address:<span id="PrimaryUser_Address_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Contact:<span id="PrimaryUser_Contact_Sync"></span></lable>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Panle for Primary User-->
+    <div class="col-xs-12 col-md-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">Secondary User Details</div>
+            <div class="panel-body">
+                <div class="row">
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">FirstName:<span id="SecondaryUser_FirstName_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">LastName:<span id="SecondaryUser_LastName_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Email:<span id="SecondaryUser_Email_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Address:<span id="SecondaryUser_Address_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Contact:<span id="SecondaryUser_Contact_Sync"></span></lable>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--second row display the secondary user and questionnarie-->
+<div class="row">
+    <!--Panle for organisation-->
+    <div class="col-xs-12 col-md-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">Organisation Details</div>
+            <div class="panel-body">
+                <div class="row">
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Username:<span id="Organisation_UserName_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Password:</lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Country:<span id="Organisation_Country_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Name:<span id="Organisation_OrganisationName_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Address:<span id="Organisation_Address_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Contact:<span id="Organisation_Contact_Sync"></span></lable>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Panle for organisation-->
+    <div class="col-xs-12 col-md-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">Questionnaires</div>
+            <div class="panel-body">
+                <div class="row">
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Which of the following is a programming language:<span id="Questionnaire_IsJave_Sync"></span>&nbsp<span id="Questionnaire_IsCSharp_Sync"></span>&nbsp<span id="Questionnaire_IsChinese_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">which of the following is not a frontend Technology:<span id="Questionnaire_FrontendTech_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">The latest version of html:<span id="Questionnaire_HtmlVersion_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Where do you hear from us:<span id="Questionnaire_HearFrom_Sync"></span></lable>
+                    <lable class="col-xs-12 col-sm-12 col-lg-12">Comment:<span id="Questionnaire_Comment_Sync"></span></lable>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--End submit form detail-->

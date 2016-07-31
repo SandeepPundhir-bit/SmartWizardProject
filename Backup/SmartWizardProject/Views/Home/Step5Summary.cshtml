@@ -1,0 +1,34 @@
+﻿
+@model WizardViewModel
+
+
+
+<!--Start Registration Detail-->
+<div class="row">
+    <div>
+        <table id="userTable" class="display">
+            <thead>
+                <tr>
+                    <th>User name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Users)
+                {
+                    <tr>
+                        <td>@item.FullName</td>
+                        <td>@item.Email</td>
+                        <td>@item.Address</td>
+                        <td>@item.Contact</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<!--End Registration Detail-->
+
