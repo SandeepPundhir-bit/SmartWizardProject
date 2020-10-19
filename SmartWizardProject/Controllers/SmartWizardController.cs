@@ -9,6 +9,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+//remove unnecessary using from above 
+
+using SmartWizardProject.Models;
+using SmartWizardProject.Persistences.Domain.Models;
+using SmartWizardProject.Services.Implements;
+using SmartWizardProject.Services.Interfaces;
+using System.Collections.Generic;
+using System.Web.Mvc;
 namespace SmartWizardProject.Controllers
 {
      
